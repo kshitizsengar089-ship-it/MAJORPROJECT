@@ -6,7 +6,9 @@
     <title>WanderLust</title>
 </head>
 <body>
+    <% layout("/layouts/boilerplate") %>
     <h3>Edit your Listing</h3>
+   
     <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
         <input name="listing[title]" value="<%=listing.title%>
         " type="text">
