@@ -9,19 +9,46 @@
     <% layout("/layouts/boilerplate") %>
     <h3>Create a new Listing</h3>
     <form method="POST" action="/listings">
-        <input name="listing[title]" placeholder="enter title" type="text">
-        <br><br>
-        <textarea name="listing[description]" placeholder="enter description" type="text"></textarea>
-        <br><br>
-        <input name="listing[image]" placeholder="enter image URL/Link" type="text">
-        <br><br>
-        <input name="listing[price]" placeholder="enter price" type="number">
-        <br><br>
-        <input name="listing[country]" placeholder="enter country" type="text">
-        <br><br>
-        <input name="listing[location]" placeholder="enter location" type="text">
-        <br><br>    
-        <button>Add</button>
+    <div>
+        <lable for="title" class="form-label">Title</lable>
+        <input name="listing[title]"
+         placeholder="enter title" 
+         type="text" 
+         class="form-control">
+    </div>
+    <div>
+        <lable for="description" class="form-label">Description</lable>
+        <textarea name="listing[description]" 
+         class="form-control">
+        </textarea>
+    </div>
+    <div>
+        <lable for="image" class="form-label">Image Link</lable>
+        <input name="listing[image]"
+         placeholder="enter image URL/Link" 
+         type="text" 
+         class="form-control">
+    </div>
+    <div>
+         <lable for="price" class="form-label">price</lable>
+         <input name="listing[price]" 
+         placeholder="enter price" 
+         type="number"
+         class="form-control">
+    </div>
+    <div>
+        <lable for="country" class="form-label">Country</lable>
+        <input name="listing[country]" 
+        placeholder="enter country"
+        type="text">
+    </div>
+    <div>
+        <lable for="location" class="form-label"></lable>
+        <input name="listing[location]" 
+        placeholder="enter location" 
+        type="text">   
+    </div> 
+        <button class="btn btn-dark">Add</button>
     </form>
     
 </body>
