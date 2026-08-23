@@ -86,6 +86,16 @@ f-info-socials i{
 
 .show-img{
     height: 30vh;
+
+}
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right:0;
     
 }
 
