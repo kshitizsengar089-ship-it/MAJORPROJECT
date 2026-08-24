@@ -11,6 +11,7 @@
          type="text" 
          class="form-control"
          required>
+         <div class="valid-feedback">Title looks good !</div>
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
@@ -18,7 +19,9 @@
          class="form-control"
          required>
         </textarea>
+        <div class="invalid-feedback">Please Enter a short description</div>
     </div>
+    
     <div class="mb-3">
         <label for="image" class="form-label">Enter image</label>
         <input name="listing[image]"
@@ -31,10 +34,11 @@
          <label for="price" class="form-label">Price</label>
          <input name="listing[price]" 
          placeholder="enter price" 
-         type="number"
          class="form-control"
          required>
+         <div class="invalid-feedback">Enter a valid Price</div>
         </div>
+        
         <div class="mb-3 col-md-8">
         <label for="country" class="form-label">Enter country</label>
         <input name="listing[country]" 
@@ -42,6 +46,7 @@
         type="text"
         class="form-control"
         required>
+         <div class="invalid-feedback">Enter country name</div>
         </div>
     </div>
     <div class="mb-3">
@@ -50,8 +55,10 @@
         placeholder="Jaipur,Rajasthan" 
         type="text"
         class="form-control"
-        required>   
-    </div> 
+        required>
+        <div class="invalid-feedback">Enter a valid Location</div>    
+    </div>
+   
         <button class="btn btn-dark add-btn">Add</button>
     </form>
     </div>
