@@ -70,6 +70,16 @@ app.post("/listings",
         if (!req.body.listing) {
             throw new ExpressError(400, "Send valid data for listing!");
         }
+        if(!newListing.title){
+            throw new ExpressError(400, "Title is missing !");
+        }
+        if(!newListing.description){
+            throw new ExpressError(400,"Description is missing!");
+        }
+        if(!newListing.location){
+            throw new ExpressError(400,"Location is missing!");
+        }
+        
          const newListing=new Listing(req.body.listing);
          console.log(req.body);
          await newListing.save();
@@ -120,7 +130,7 @@ app.use((err, req, res, next) => {
         message = `Invalid value for ${err.path}: ${err.value}`;
     }
 
-    res.status(statusCode).send(message);
+    res.status(statusCode).render("error.ejs",{message});
 });
 app.listen(8080,()=>{
     console.log("server is listening to port 8080");
